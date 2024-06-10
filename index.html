@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW Cars Store</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+        }
+        .navbar {
+            background-color: #000;
+        }
+        .navbar-brand img {
+            width: 50px;
+        }
+        .nav-link {
+            color: #fff;
+        }
+        .nav-link:hover {
+            color: #bbb;
+        }
+        .hero {
+            background-image: url('bmw2.jpg'); 
+            background-size: cover;
+            background-position: center;
+            padding: 150px 0;
+            text-align: center;
+            color: #fff;
+        }
+        .hero h1 {
+            font-size: 4em;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+        .hero .btn {
+            font-size: 1.2em;
+            padding: 10px 30px;
+            background-color: #0056b3;
+            border: none;
+        }
+        .features {
+            padding: 50px 0;
+            background-color: #111;
+        }
+        .features h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        footer {
+            padding: 20px 0;
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+        }
+        .carousel-item img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#"><img src="logo.png" alt="BMW"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Models</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="quiz.html">Quiz</a></li>
+                <li class="nav-item">
+                    <select id="languageSelector" class="form-control">
+                        <option value="en">En</option>
+                        <option value="ru">Ru</option>
+                        <option value="kk">Kk</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>BMW M5 COMPETITION</h1>
+        <p>ВСЕГДА ГОТОВ ПОБЕЖДАТЬ</p>
+        <a href="#" class="btn btn-primary">Узнать больше</a>
+    </div>
+
+    <div class="container features text-center">
+        <div class="row">
+            <div class="col-md-4">
+                <h2>600 л.с.</h2>
+                <p>Мощность двигателя</p>
+            </div>
+            <div class="col-md-4">
+                <h2>3.3 км/ч, с</h2>
+                <p>Время разгона до 100 км/ч</p>
+            </div>
+            <div class="col-md-4">
+                <h2>4.4 л</h2>
+                <p>Объем двигателя</p>
+            </div>
+            <div class="col-md-4">
+                <h2>1.93 т</h2>
+                <p>Масса без груза</p>
+            </div>
+            <div class="col-md-4">
+                <h2>250 км/ч</h2>
+                <p>Максимальная скорость</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="bmw11.jpg" class="d-block w-100" alt="BMW Car 1">
+            </div>
+            <div class="carousel-item">
+                <img src="bmw2.jpg" class="d-block w-100" alt="BMW Car 2">
+            </div>
+            <div class="carousel-item">
+                <img src="bmw3.jpg" class="d-block w-100" alt="BMW Car 3">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="bmw11.jpg" class="card-img-top" alt="BMW Car 1">
+                    <div class="card-body">
+                        <h5 class="card-title">BMW Model 1</h5>
+                        <p class="card-text">Description of BMW Model 1.</p>
+                        <a href="#" class="btn btn-primary">More Info</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="bmw2.jpg" class="card-img-top" alt="BMW Car 2">
+                    <div class="card-body">
+                        <h5 class="card-title">BMW Model 2</h5>
+                        <p class="card-text">Description of BMW Model 2.</p>
+                        <a href="#" class="btn btn-primary">More Info</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="bmw3.jpg" class="card-img-top" alt="BMW Car 3">
+                    <div class="card-body">
+                        <h5 class="card-title">BMW Model 3</h5>
+                        <p class="card-text">Description of BMW Model 3.</p>
+                        <a href="#" class="btn btn-primary">More Info</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="contact" class="container">
+        <h2>Contact Us</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Send us your inquiry</h3>
+                <form action="mailto:example@example.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h3>Contact Information</h3>
+                <p>For inquiries and assistance, please contact our manager:</p>
+                <p>Manager: John Doe</p>
+                <p>Phone: <a href="tel:+187779290841">87779290841</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 BMW Cars. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        const translations = {
+            en: {
+                title: "BMW M5 COMPETITION",
+                subtitle: "ALWAYS READY TO WIN",
+                button: "Learn More",
+                feature1: "Engine Power",
+                feature2: "Acceleration Time to 100 km/h",
+                feature3: "Engine Volume",
+                feature4: "Unladen Weight",
+                feature5: "Top Speed",
+                contactUs: "Contact Us",
+                sendInquiry: "Send us your inquiry",
+                name: "Name",
+                email: "Email address",
+                message: "Message",
+                submit: "Submit",
+                contactInfo: "Contact Information",
+                inquiries: "For inquiries and assistance, please contact our manager:",
+                manager: "Manager: John Doe",
+                phone: "Phone: ",
+                cardTitle1: "BMW Model 1",
+                cardText1: "Description of BMW Model 1.",
+                cardTitle2: "BMW Model 2",
+                cardText2: "Description of BMW Model 2.",
+                cardTitle3: "BMW Model 3",
+                cardText3: "Description of BMW Model 3.",
+                moreInfo: "More Info"
+            },
+            ru: {
+                title: "BMW M5 COMPETITION",
+                subtitle: "ВСЕГДА ГОТОВ ПОБЕЖДАТЬ",
+                button: "Узнать больше",
+                feature1: "Мощность двигателя",
+                feature2: "Время разгона до 100 км/ч",
+                feature3: "Объем двигателя",
+                feature4: "Масса без груза",
+                feature5: "Максимальная скорость",
+                contactUs: "Свяжитесь с нами",
+                sendInquiry: "Отправьте нам свой запрос",
+                name: "Имя",
+                email: "Электронная почта",
+                message: "Сообщение",
+                submit: "Отправить",
+                contactInfo: "Контактная информация",
+                inquiries: "По вопросам и помощи, пожалуйста, свяжитесь с нашим менеджером:",
+                manager: "Менеджер: John Doe",
+                phone: "Телефон: ",
+                cardTitle1: "BMW Модель 1",
+                cardText1: "Описание BMW Модель 1.",
+                cardTitle2: "BMW Модель 2",
+                cardText2: "Описание BMW Модель 2.",
+                cardTitle3: "BMW Модель 3",
+                cardText3: "Описание BMW Модель 3.",
+                moreInfo: "Подробнее"
+            },
+            kk: {
+                title: "BMW M5 COMPETITION",
+                subtitle: "ӘРҚАШАН ЖЕҢІСКЕ ДАЙЫН",
+                button: "Толығырақ",
+                feature1: "Қозғалтқыштың қуаты",
+                feature2: "100 км/сағ дейін үдеу уақыты",
+                feature3: "Қозғалтқыш көлемі",
+                feature4: "Жүксіз салмақ",
+                feature5: "Ең жоғары жылдамдық",
+                contactUs: "Бізбен байланысыңыз",
+                sendInquiry: "Бізге сұрауыңызды жіберіңіз",
+                name: "Аты",
+                email: "Электрондық пошта",
+                message: "Хабарлама",
+                submit: "Жіберу",
+                contactInfo: "Байланыс ақпараты",
+                inquiries: "Сұраулар мен көмекке қатысты біздің менеджерге хабарласыңыз:",
+                manager: "Менеджер: John Doe",
+                phone: "Телефон: ",
+                cardTitle1: "BMW Модель 1",
+                cardText1: "BMW Модель 1 сипаттамасы.",
+                cardTitle2: "BMW Модель 2",
+                cardText2: "BMW Модель 2 сипаттамасы.",
+                cardTitle3: "BMW Модель 3",
+                cardText3: "BMW Модель 3 сипаттамасы.",
+                moreInfo: "Толығырақ"
+            }
+        };
+
+        document.getElementById('languageSelector').addEventListener('change', function() {
+            const language = this.value;
+            document.querySelector('.hero h1').innerText = translations[language].title;
+            document.querySelector('.hero p').innerText = translations[language].subtitle;
+            document.querySelector('.hero .btn').innerText = translations[language].button;
+            const features = document.querySelectorAll('.features .row div h2');
+            features[0].innerText = translations[language].feature1;
+            features[1].innerText = translations[language].feature2;
+            features[2].innerText = translations[language].feature3;
+            features[3].innerText = translations[language].feature4;
+            features[4].innerText = translations[language].feature5;
+
+            document.querySelector('#contact h2').innerText = translations[language].contactUs;
+            document.querySelector('#contact h3').innerText = translations[language].sendInquiry;
+            document.querySelector('label[for="name"]').innerText = translations[language].name;
+            document.querySelector('label[for="email"]').innerText = translations[language].email;
+            document.querySelector('label[for="message"]').innerText = translations[language].message;
+            document.querySelector('#contact .btn-primary').innerText = translations[language].submit;
+            document.querySelector('#contact .col-md-6:nth-child(2) h3').innerText = translations[language].contactInfo;
+            document.querySelector('#contact .col-md-6:nth-child(2) p:nth-child(3)').innerText = translations[language].inquiries;
+            document.querySelector('#contact .col-md-6:nth-child(2) p:nth-child(4)').innerText = translations[language].manager;
+            document.querySelector('#contact .col-md-6:nth-child(2) p:nth-child(5)').innerHTML = translations[language].phone + '<a href="tel:+187779290841">87779290841</a>';
+
+            document.querySelector('.card:nth-child(1) .card-title').innerText = translations[language].cardTitle1;
+            document.querySelector('.card:nth-child(1) .card-text').innerText = translations[language].cardText1;
+            document.querySelector('.card:nth-child(1) .btn').innerText = translations[language].moreInfo;
+
+            document.querySelector('.card:nth-child(2) .card-title').innerText = translations[language].cardTitle2;
+            document.querySelector('.card:nth-child(2) .card-text').innerText = translations[language].cardText2;
+            document.querySelector('.card:nth-child(2) .btn').innerText = translations[language].moreInfo;
+
+            document.querySelector('.card:nth-child(3) .card-title').innerText = translations[language].cardTitle3;
+            document.querySelector('.card:nth-child(3) .card-text').innerText = translations[language].cardText3;
+            document.querySelector('.card:nth-child(3) .btn').innerText = translations[language].moreInfo;
+        });
+
+        // Additional JavaScript for animations, sound, etc.
+    </script>
+</body>
+</html>

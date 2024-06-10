@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+        }
+        .navbar {
+            background-color: #000;
+        }
+        .navbar-brand img {
+            width: 50px;
+        }
+        .nav-link {
+            color: #fff;
+        }
+        .nav-link:hover {
+            color: #bbb;
+        }
+        .quiz-container {
+            padding: 50px 0;
+        }
+        .question {
+            margin-bottom: 30px;
+        }
+        .footer {
+            padding: 20px 0;
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html"><img src="your-logo-url.png" alt="BMW Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Models</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="quiz.html">Quiz</a></li>
+                <li class="nav-item">
+                    <select id="languageSelector" class="form-control">
+                        <option value="en">En</option>
+                        <option value="ru">Ru</option>
+                        <option value="kk">Kk</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container quiz-container">
+        <h2 class="text-center">Find Your Perfect BMW</h2>
+        <div class="question">
+            <h4>1. What type of driving do you prefer?</h4>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="drivingPreference" id="city" value="city">
+                <label class="form-check-label" for="city">City Driving</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="drivingPreference" id="offroad" value="offroad">
+                <label class="form-check-label" for="offroad">Off-road Driving</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="drivingPreference" id="sport" value="sport">
+                <label class="form-check-label" for="sport">Sport Driving</label>
+            </div>
+        </div>
+        <div class="question">
+            <h4>2. What is your budget range?</h4>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="budget" id="budget1" value="low">
+                <label class="form-check-label" for="budget1">Below $50,000</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="budget" id="budget2" value="medium">
+                <label class="form-check-label" for="budget2">$50,000 - $100,000</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="budget" id="budget3" value="high">
+                <label class="form-check-label" for="budget3">Above $100,000</label>
+            </div>
+        </div>
+        <div class="question">
+            <h4>3. What features are most important to you?</h4>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="feature1" value="safety">
+                <label class="form-check-label" for="feature1">Safety</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="feature2" value="performance">
+                <label class="form-check-label" for="feature2">Performance</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="feature3" value="comfort">
+                <label class="form-check-label" for="feature3">Comfort</label>
+            </div>
+        </div>
+        <button id="submitQuiz" class="btn btn-primary">Submit</button>
+    </div>
+
+    <footer class="footer">
+        <p>© 2024 BMW Cars. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('submitQuiz').addEventListener('click', function() {
+            let drivingPreference = document.querySelector('input[name="drivingPreference"]:checked').value;
+            let budget = document.querySelector('input[name="budget"]:checked').value;
+            let features = [];
+            document.querySelectorAll('input[type="checkbox"]:checked').forEach(function(feature) {
+                features.push(feature.value);
+            });
+
+            alert("Thank you for your responses! \nDriving Preference: " + drivingPreference + "\nBudget: " + budget + "\nFeatures: " + features.join(", "));
+        });
+
+        const translations = {
+            en: {
+                quizTitle: "Find Your Perfect BMW",
+                question1: "1. What type of driving do you prefer?",
+                question2: "2. What is your budget range?",
+                question3: "3. What features are most important to you?",
+                submitButton: "Submit",
+            },
+            ru: {
+                quizTitle: "Найдите свой идеальный BMW",
+                question1: "1. Какой тип вождения вы предпочитаете?",
+                question2: "2. Каков ваш диапазон бюджета?",
+                question3: "3. Какие функции для вас наиболее важны?",
+                submitButton: "Отправить",
+            },
+            kk: {
+                quizTitle: "Сіздің мінсіз BMW-ды табыңыз",
+                question1: "1. Сіз қандай жүргізу түрін қалайсыз?",
+                question2: "2. Сіздің бюджетіңіз қандай?",
+                question3: "3. Сізге қандай мүмкіндіктер маңызды?",
+                submitButton: "Жіберу",
+            }
+        };
+
+        document.getElementById('languageSelector').addEventListener('change', function() {
+            const language = this.value;
+            document.querySelector('.quiz-container h2').innerText = translations[language].quizTitle;
+            document.querySelector('.question:nth-child(1) h4').innerText = translations[language].question1;
+            document.querySelector('.question:nth-child(2) h4').innerText = translations[language].question2;
+            document.querySelector('.question:nth-child(3) h4').innerText = translations[language].question3;
+            document.getElementById('submitQuiz').innerText = translations[language].submitButton;
+        });
+    </script>
+</body>
+</html>
